@@ -3035,6 +3035,11 @@ csso@^4.0.2:
   dependencies:
     css-tree "^1.1.2"
 
+cssom@^0.3.2:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.3.8.tgz#9f1276f5b2b463f2114d3f2c75250af8c1a36f4a"
+  integrity sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npm.taobao.org/currently-unhandled/download/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -8623,6 +8628,13 @@ vue-router@^3.2.0:
   version "3.5.1"
   resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-3.5.1.tgz?cache=0&sync_timestamp=1615477699509&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.5.1.tgz#edf3cf4907952d1e0583e079237220c5ff6eb6c9"
   integrity sha1-7fPPSQeVLR4Fg+B5I3Igxf9utsk=
+
+vue-simple-svg@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/vue-simple-svg/-/vue-simple-svg-2.0.2.tgz#31275a52e9507599543b302b0414f4ce232c850f"
+  integrity sha512-L98WJApnqX8ud3mRSXjwRHXmR0yg8oLNQk+ahrVx3qLjGmF78AOe8Yn254rnTQCFd8MFvFuDmgs35p0OI+uy0Q==
+  dependencies:
+    cssom "^0.3.2"
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"
