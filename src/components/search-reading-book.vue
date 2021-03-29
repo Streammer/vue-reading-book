@@ -1,21 +1,20 @@
 <template>
   <div class="search-reading-book">
     <input type="text">
-<!--    <vue-simple-svg-->
-<!--        :src="require('../assets/images/icons/loupe_icon.svg')"-->
-<!--        width="100%"-->
-<!--        height="100%"-->
-<!--    />-->
-    <img class="search-icon" src="../assets/images/icons/loupe_icon.png" alt="seaarch icon">
+    <inline-svg
+        :src="require('../assets/images/icons/magnifying-glass.svg')"
+        width='10'
+        class="search-icon"
+    ></inline-svg>
   </div>
 </template>
 
 <script>
-// import vueSimpleSvg from 'vue-simple-svg'
+import InlineSvg from "vue-inline-svg";
 export default {
   name: "search-reading-book",
   components: {
-    // vueSimpleSvg,
+    InlineSvg
   },
 }
 </script>
