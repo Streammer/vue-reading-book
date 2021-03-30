@@ -4,6 +4,8 @@
       <img class="main-logo" src="../assets/logo.png" alt="Main logo">
       <Filters
           :options="options"
+          @select="select"
+          :selected = "selected"
       />
       <nav class="navigation">
         <!--      <router-link to="/">Home</router-link> |-->
@@ -28,14 +30,21 @@ export default {
   data() {
     return {
       options: [
+          'All items',
           'item1',
           'item2',
           'item3',
           'item4',
           'item5'
-      ]
+      ],
+      selected: 'All items',
     }
   },
+  methods: {
+    select(option) {
+      this.selected = option
+    }
+  }
 }
 </script>
 

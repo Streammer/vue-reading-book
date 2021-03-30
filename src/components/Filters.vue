@@ -3,7 +3,7 @@
     <div class="filters"
          @click="isFiltersOpen=!isFiltersOpen"
     >
-      <div class="title">All items</div>
+      <div class="title">{{selected}}</div>
       <inline-svg
           :src="require('../assets/images/icons/down-chevron.svg')"
           width='10'
@@ -20,6 +20,7 @@
             class="filter_categories__item"
             v-for="(option, i) in options"
             :key="i"
+            @click="select(option)"
         >
           {{option}}
         </div>
@@ -41,7 +42,11 @@ export default {
       default() {
         return []
       }
-    }
+    },
+    selected: {
+      type: String,
+      default: ''
+    },
   },
   data() {
     return {
@@ -55,6 +60,9 @@ export default {
       if (target != this.$refs['filters'] && !this.$refs['filters'].contains(target)) {
         this.isFiltersOpen = false
       }
+    },
+    select(option) {
+      this.$emit('select', option)
     }
   },
   watch: {
@@ -124,6 +132,11 @@ export default {
     background: #fff;
     &__item {
       padding: 10px 5px;
+      &:hover {
+        cursor: pointer;
+        background: silver;
+        color: white;
+      }
     }
   }
 }
