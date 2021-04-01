@@ -14,6 +14,7 @@
 <script>
 // @ is an alias to /src
 import bookItem from './book-item'
+import {mapActions, mapGetters} from 'vuex'
 export default {
   name: 'Catalog',
   components: {
@@ -72,7 +73,22 @@ export default {
         },
       ]
     }
-  }
+  },
+  methods: {
+    ...mapActions([
+        // 'GET_BOOKS_ARRAY_FROM_API',
+        'GET_BOOKS_ARRAY_FROM_API2'
+    ])
+  },
+  computed: {
+    ...mapGetters([
+        'BOOKS'
+    ])
+  },
+  mounted() {
+    // this.GET_BOOKS_ARRAY_FROM_API();
+    this.GET_BOOKS_ARRAY_FROM_API2();
+  },
 }
 </script>
 <style lang="scss" scoped>
