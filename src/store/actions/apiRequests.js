@@ -1,10 +1,12 @@
+import axios from "axios";
 export default {
-    // GET_BOOKS_ARRAY_FROM_API({commit}) {
-    //     return fetch("../../books.json")
-    //         .then(response => {
-    //             console.log(response.books)
-    //             commit('SET_BOOKS_ARRAY_TO_VUEX', response.books)
-    //             return response.books
+    // GET_BOOKS_FROM_API({commit}) {
+    //     return axios('  http://localhost:3000/books', {
+    //         method: "GET"
+    //     })
+    //         .then((products) => {
+    //             commit('SET_BOOKS_ARRAY_TO_VUEX', products.data)
+    //             return products
     //         })
     //         .catch((error) => {
     //                 console.log(error)
@@ -12,12 +14,16 @@ export default {
     //             }
     //         )
     // },
-    GET_BOOKS_ARRAY_FROM_API2 ({commit}) {
-
-    fetch("../../books.json")
-        .then(async response=> {
-            commit('SET_BOOKS_ARRAY_TO_VUEX', response.books)
-        })
-
+    // await axios.post('{{ request_absolute_uri }}', formData, config)
+    //     .then((response) => {
+    //         this.availabilityMessage = response.data.message;
+    //     }).catch((error) => {
+    //         this.availabilityMessage = false;
+    //         console.log(error);
+    //     });
+     async GET_BOOKS_FROM_API({commit}) {
+        const dataBooks = await axios('  http://localhost:3000/books', {method: "GET"})
+         commit('SET_BOOKS_ARRAY_TO_VUEX', dataBooks.data)
+         return dataBooks
     }
 }

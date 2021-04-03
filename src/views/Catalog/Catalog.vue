@@ -3,7 +3,7 @@
     <h1 class="popular">Popular of the week</h1>
     <div class="container">
       <book-item
-          v-for="(book, i) in books"
+          v-for="(book, i) in BOOKS"
           :book="book"
           :key="i"
       />
@@ -76,8 +76,7 @@ export default {
   },
   methods: {
     ...mapActions([
-        // 'GET_BOOKS_ARRAY_FROM_API',
-        'GET_BOOKS_ARRAY_FROM_API2'
+        'GET_BOOKS_FROM_API'
     ])
   },
   computed: {
@@ -86,8 +85,7 @@ export default {
     ])
   },
   mounted() {
-    // this.GET_BOOKS_ARRAY_FROM_API();
-    this.GET_BOOKS_ARRAY_FROM_API2();
+    this.GET_BOOKS_FROM_API()
   },
 }
 </script>
