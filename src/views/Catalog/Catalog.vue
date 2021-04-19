@@ -134,5 +134,4 @@ export default {
       grid-template-columns: minmax(0, 1fr);
     }
   }
-
 </style>
