@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <img class="main-logo" src="../assets/logo.png" alt="Main logo">
+      <img class="main-logo" src="../assets/cat1.png" alt="Main logo">
       <Filters
           :options="options"
           @select="select"
